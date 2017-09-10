@@ -1,0 +1,23 @@
+★J2EE是一套全然不同于传统应用开发的技术架构，包含许多组件，主要可简化且规范应用系统的开发与部署，进而提高可移植性、安全与再用价值。
+其核心是一组技术规范与指南，其中所包含的各类组件、服务架构及技术层次，均有共同的标准及规格，让各种依循J2EE架构的不同平台之间，存在良好的兼容性，
+解决过去企业后端使用的信息产品彼此之间无法兼容，企业内部或外部难以互通的窘境。J2EE组件和“标准的” Java类的不同点在于：它被装配在一个J2EE应用中，具有固定的格式并遵守J2EE规范，由J2EE服务器对其进行管理。
+★J2EE规范是这样定义J2EE组件的：客户端应用程序和applet是运行在客户端的组件；Java Servlet和Java Server Pages (JSP) 是运行在服务器端的Web组件；Enterprise Java Bean (EJB )组件是运行在服务器端的业务组件
+J2EE常用三大框架，分别是Struts，Spring，Hibernate；这三大框架组合，可以进行一些轻量级系统和相关web应用的开发；
+
+
+※Struts：它通过采用JavaServlet/JSP技术，实现了基于JavaEE Web应用的MVC设计模式的应用框架，是MVC经典设计模式中的一个经典产品；随着时间的推移，也完成从struts1到struts2的转变，Struts2是Struts的下一代产品，是在 struts1和WebWork的技术基础上进行了合并的全新的Struts2框架。其全新的Struts2的体系结构与Struts1的体系结构差别巨大；Struts2以WebWork为核心，采用拦截器的机制来处理用户的请求，这样的设计也使得业务逻辑控制器能够与ServletAPI完全脱离开，所以Struts2可以理解为WebWork的更新产品；虽然从Struts1到Struts2有着太大的变化，但是相对于WebWork，Struts2的变化很小；主要实现了层的功能。
+
+※Spring：这是一个开放源代码的设计层面框架，他解决的是业务逻辑层和其他各层的松耦合问题，因此它将面向接口的编程思想贯穿整个系统应用。Spring是于2003 年兴起的一个轻量级的Java 开发框架，由Rod Johnson创建。简单来说，Spring是一个分层的JavaSE/EEfull-stack(一站式) 轻量级开源框架。通过运用其特有的IOC（依赖注入）和AOC(面向切面)的功能来达到实现系统内低耦合高内聚的作用。
+
+※Hibernate：作为一个开放源代码的对象关系映射框架，它对JDBC进行了非常轻量级的对象封装，它将POJO与数据库表建立映射关系，是一个全自动的orm框架，hibernate可以自动生成SQL语句，自动执行，使得Java程序员可以随心所欲的使用对象编程思维来操纵数据库。 Hibernate可以应用在任何使用JDBC的场合，既可以在Java的客户端程序使用，也可以在Servlet/JSP的Web应用中使用，最具革命意义的是，Hibernate可以在应用EJB的J2EE架构中取代CMP，完成数据持久化的重任。实现与底层数据库的交互和是数据持久化到数据库。
+
+
+★MVC：mvc框架中，M代表Model，是模型的意思；V即View.是视图的意思；C则代表Controler，是控制器的意思。
+
+※M，即Model，在Java Web里说的是JavaBean，可能有很多人都把JavaBean误认为是实体类，其实JavaBean有比实体类更丰富的定义，在JavaBean中除了其属性和字段，还可以有行为及其事件，JavaBean可以理解为普通Java对象。Java普通对象，就是符合Java规范的所有对象，这和实体类完全是两回事。所以，我认为在MVC中。业务逻辑和数据访问应该放在Model层
+
+※V负责展示数据，作为视图，是直接展示给用户看的；
+ 
+※Controller是控制器的意思，所谓控制器，就是将用户请求转发给模型层，经过处理后把结果返回到界面展现的一个中间层，那么Controler到底管什么工作呢？先不说.先来看下在Java Web中这三个层一般的定义，一般在Java Web里，JSP充当V，Servlet充当C,JavaBean充当M，这里的Servlet管什么工作呢？接受输入，转到Model层去处理，处理结果保存后转发到JSP，然后展现数据。所以它的功能就是控制器的基本功能，它就管转发，在V和M之间转来转去。
+
+ps：部分定义内容参考百度百科，维奇百科；
